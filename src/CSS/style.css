@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'image'
+      'login'
+      'username'
+      'password'
+      'button'
+      'forgot';
+    grid-gap: 10px;
+    padding: 10px;
+    align-items: center;
+    background-color: aquamarine;
+  }
+  
+  .grid-container > div {
+    text-align: center;
+  }
+  
+  .image {
+    grid-area: image;
+  }
+  
+  .login {
+    grid-area: login;
+  }
+  
+  .username {
+    grid-area: username;
+  }
+  
+  .password {
+    grid-area: password;
+  }
+  
+  .button {
+    grid-area: button;
+  }
+  
+  .forgot {
+    grid-area: forgot;
+  }
