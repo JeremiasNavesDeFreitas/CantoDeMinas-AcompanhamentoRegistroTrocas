@@ -9,4 +9,4 @@ Sistema de Acompanhamento e Registro de Trocas - Canto de Minas
 <p>Os Wireframes estão divididos em 2 versões: Mobile(360px x 640px) e Desktop(1440px x 1024px)</p>
 
 <h3>Login</h3>
-<img href="../DocumentatioAssets/">Wireframe Login Desktop</img>
+<img href="./DocumentatioAssets/DesktopLogin.png">
