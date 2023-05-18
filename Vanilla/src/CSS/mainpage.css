@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 25vw 1fr;
+    grid-template-rows: 100vh;
+    gap: 10px;
+  }
+
+  .sidebar {
+    background-color: aquamarine;
+    padding: 20px;
+  }
+
+  .rectangle {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+
+  .circle {
+    padding: 5% 5%;
+    width: 50%;
+    height: 50%;
+    background-color: #f00;
+    border-radius: 50%;
+  }
+
+  .user-info {
+    margin-top: 10px;
+  }
+
+  .search {
+    margin-top: 20px;
+  }
+
+  .features {
+    margin-top: 20px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .buttons button {
+    margin-left: 10px;
+  }

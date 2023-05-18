@@ -29,30 +29,35 @@ body {
     text-align: center;
   }
   
-  .image {
-    grid-area: image;
-  }
-  
   .login {
     grid-area: login;
+    font-size: larger;
+    margin-top: -5vh;
+    margin-bottom: -10vh;
   }
   
   .username {
+    margin-top: -10vh;
     grid-area: username;
   }
   
   .password {
+    margin-top: -30vh;
     grid-area: password;
   }
   
   .button {
     grid-area: button;
+    margin-top: -35vh;
   }
   
   .forgot {
     grid-area: forgot;
+    margin-top: -50vh;
   }
 
   .logo{
-    width: 10vw;
+    margin-left: 17.5%;
+    margin-top: -220vh;
+    width: 15vw;
   }
