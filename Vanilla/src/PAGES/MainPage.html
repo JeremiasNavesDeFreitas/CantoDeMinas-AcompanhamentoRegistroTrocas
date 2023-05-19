@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" href="../CSS/mainpage.css" />
+  <link rel="stylesheet" href="../CSS/mainpage.css" />
 </head>
+
 <body>
   <div class="grid-container">
     <div class="sidebar">
       <div class="rectangle">
-        <div class="circle"></div>
+        <div class="user-info">
+          <b class="UserName">Nome de usuário</b>
+          <p class="NivelAcesso">Nível de acesso</p>
+        </div>
+        <div class="circle">
+        </div>
       </div>
-      <div class="user-info">
-        <p>Nome de usuário</p>
-        <p>Nível de acesso</p>
-      </div>
+
       <div class="search">
         <input type="text" placeholder="Pesquisar">
       </div>
       <div class="features">
         <a href="#">Feature 1</a>
+        <br>
         <a href="#">Feature 2</a>
+        <br>
         <a href="#">Feature 3</a>
+        <br>
         <a href="#">Feature 4</a>
+        <br>
         <a href="#">Feature 5</a>
+        <br>
         <a href="#">Feature 6</a>
       </div>
     </div>
     <div class="form">
-      <!-- Aqui vão os campos do formulário -->
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id"><br><br>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome"><br><br>
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf"><br><br>
+
+      <label for="celular">Celular:</label>
+      <input type="text" id="celular" name="celular"><br><br>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco"><br><br>
+
+      <select id="cargo" name="cargo">
+        <option value="">Selecione um cargo</option>
+        <option value="administrador">Administrador</option>
+        <option value="supervisor">Supervisor</option>
+        <option value="repositor">Repositor</option>
+        <option value="logista">Logista</option>
+      </select><br><br>
+
       <div class="buttons">
         <button>Deletar</button>
         <button>Alterar</button>
@@ -35,4 +66,5 @@
     </div>
   </div>
 </body>
+
 </html>

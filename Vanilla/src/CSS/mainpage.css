@@ -4,28 +4,35 @@ body {
   }
 
   .grid-container {
+    position:absolute;
     display: grid;
-    grid-template-columns: 25vw 1fr;
+    grid-template-columns: 17.5vw 1fr;
     grid-template-rows: 100vh;
     gap: 10px;
+    justify-content: center;
   }
 
   .sidebar {
     background-color: aquamarine;
     padding: 20px;
+    justify-content: center;
   }
 
   .rectangle {
-    width: 100px;
-    height: 100px;
+    position: relative;
+    width: 15vw;
+    height: 5vh;
     background-color: #ccc;
     border-radius: 5px;
   }
 
   .circle {
+    position: absolute;
+    left: 2%;
+    top: 10%;
     padding: 5% 5%;
-    width: 50%;
-    height: 50%;
+    width: 0.5vw;
+    height: 0.5vw;
     background-color: #f00;
     border-radius: 50%;
   }
@@ -35,10 +42,14 @@ body {
   }
 
   .search {
+    position: relative;
+    justify-content: center;
     margin-top: 20px;
   }
 
   .features {
+    position: relative;
+    left: 5vw;
     margin-top: 20px;
   }
 
@@ -54,4 +65,57 @@ body {
 
   .buttons button {
     margin-left: 10px;
+  }
+
+  .UserName{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    font-size: 18px;
+
+  }
+
+  .NivelAcesso{
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    font-size: 14px;
+  }
+
+  @media (max-width: 1280px){
+    .UserName{
+      position: absolute;
+      top: 7.5%;
+      left: 20%;
+      font-size: 16px;
+  
+    }
+  
+    .NivelAcesso{
+      position: absolute;
+      top: 10%;
+      left: 20%;
+      font-size: 14px;
+    }
+
+    .rectangle {
+      position: relative;
+      width: 15vw;
+      height: 5vh;
+      background-color: #ccc;
+      border-radius: 5px;
+    }
+  
+    .circle {
+      position: absolute;
+      left: 2%;
+      top: 15%;
+      padding: 5% 5%;
+      width: 0.5vw;
+      height: 0.5vw;
+      background-color: #f00;
+      border-radius: 50%;
+    }
+
+
   }
