@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .grid-container {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 22.5vw 1fr; /* Aumenta a largura da sidebar em 5% */
+    grid-template-rows: 100vh;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .sidebar {
+    background-color: #05862c;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .user-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+  }
+
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-name {
+    font-weight: bold;
+  }
+
+  .access-level {
+    color: #888;
+  }
+
+  .search-bar {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-option {
+    padding: 10px 20px;
+    background-color: lightgray;
+    margin-bottom: 10px;
+    width: 15vw;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .botao_sair {
+    margin-top: 40vh;
+  }
+
+  .titulo {
+    text-align: center; /* Centraliza o texto "Sistema de Controle e Acompanhamento de Trocas" */
+  }
+
+  .bem-vindo {
+    text-align: center; /* Centraliza o texto "Seja Bem Vindo!" */
+  }
+
+
+  @media (max-width: 768px) {
+    /* Estilos para telas menores ou iguais a 768px de largura */
+    .grid-container {
+      grid-template-columns: 1fr; /* Altera para uma única coluna */
+      grid-template-rows: auto 1fr;
+      padding: 20px;
+    }
+
+    .sidebar {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .user-bar {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .user-photo {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .search-bar {
+      margin-bottom: 10px;
+    }
+  }
