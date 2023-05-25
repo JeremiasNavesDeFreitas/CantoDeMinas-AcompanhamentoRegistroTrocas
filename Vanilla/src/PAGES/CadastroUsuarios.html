@@ -2,41 +2,34 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="../CSS/mainpage.css" />
-  <script src="../JS/scripts.js"></script>
+  <link rel="stylesheet" href="../CSS/home.css" />
 </head>
 
 <body>
-  <div class="grid-container">
-    <div class="sidebar">
-      <div class="user-bar">
-        <div class="user-photo"></div>
-        <div class="user-details">
-          <span class="user-name">Nome do Usuário</span>
-          <span class="access-level">Nível de Acesso</span>
+    <div class="grid-container">
+        <div class="sidebar">
+          <div class="user-bar">
+            <div class="user-photo"></div>
+            <div class="user-details">
+              <span class="user-name">Nome do Usuário</span>
+              <span class="access-level">Nível de Acesso</span>
+            </div>
+          </div>
+          <div class="content">
+            <div class="search-bar">
+              <input type="text" placeholder="Pesquisar" />
+            </div>
+            <div class="menu">
+              <button class="menu-option">Ususários</button>
+              <button class="menu-option">Lojas</button>
+              <button class="menu-option">Produtos</button>
+              <button class="menu-option">Relatórios de Trocas</button>
+            </div>
+            <button class="botao_sair">Sair</button>
+          </div>
         </div>
-      </div>
-        </div>
-      </div>
-
-      <div class="search">
-        <input class="pesquisar" type="text" placeholder="Pesquisar">
-      </div>
-      <div class="features">
-        <a href="#">Feature 1</a>
-        <br>
-        <a href="#">Feature 2</a>
-        <br>
-        <a href="#">Feature 3</a>
-        <br>
-        <a href="#">Feature 4</a>
-        <br>
-        <a href="#">Feature 5</a>
-        <br>
-        <a href="#">Feature 6</a>
-      </div>
-    </div>
-    <div class="form">
+        <div class="conteudo">
+            <div class="form">
       <label for="id">ID:</label>
       <input type="text" id="id" name="id"><br><br>
 
@@ -68,8 +61,8 @@
         <button>Alterar</button>
         <button id="salvarButton">Salvar</button>
       </div>
-    </div>
-  </div>
+        </div>
+      </div>
 </body>
 
 </html>
