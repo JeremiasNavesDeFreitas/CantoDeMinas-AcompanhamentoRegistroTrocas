@@ -18,33 +18,46 @@ body {
     justify-content: center;
   }
 
-  .rectangle {
-    position: relative;
-    width: 15vw;
-    height: 5vh;
-    background-color: #ccc;
+  .user-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
     border-radius: 5px;
   }
-
-  .circle {
-    position: absolute;
-    left: 2%;
-    top: 10%;
-    padding: 5% 5%;
-    width: 0.5vw;
-    height: 0.5vw;
-    background-color: #f00;
+  
+  .user-photo {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
   }
-
-  .user-info {
-    margin-top: 10px;
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .access-level {
+    color: #888;
   }
 
   .search {
     position: relative;
     justify-content: center;
     margin-top: 20px;
+    color: #f00;
+  }
+
+  .pesquisar{
+    border: none;
+    border-radius: 5px;
+    background-color: #f00;
   }
 
   .features {

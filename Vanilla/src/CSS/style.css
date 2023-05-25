@@ -1,63 +1,77 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #05862C;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #05862c;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "login"
+    "username"
+    "password"
+    "button"
+    "forgot";
+  grid-gap: 10px;
+  padding: 10px;
+  background-color: #fff;
+  align-items: center;
+  width: 75vw;
+  border-radius: 20px;
+}
+
+.grid-container > div {
+  text-align: center;
+}
+
+.login {
+  grid-area: login;
+  font-size:medium;
+}
+
+.username {
+  grid-area: username;
+}
+
+.password {
+  grid-area: password;
+}
+
+.button {
+  grid-area: button;
+}
+
+.forgot {
+  grid-area: forgot;
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 175px;
+}
+
+@media only screen and (orientation: landscape) {
   .grid-container {
     display: grid;
     grid-template-areas:
-      'login'
-      'username'
-      'password'
-      'button'
-      'forgot';
+      "logo"
+      "login"
+      "username"
+      "password"
+      "button"
+      "forgot";
     grid-gap: 10px;
     padding: 10px;
     background-color: #fff;
     align-items: center;
-    margin-top: 33.3%;
-    width: 25%;
-    height: 100%;
+    width: 20vw;
     border-radius: 20px;
   }
   
-  .grid-container > div {
-    text-align: center;
-  }
-  
-  .login {
-    grid-area: login;
-    font-size: larger;
-    margin-top: -5vh;
-    margin-bottom: -10vh;
-  }
-  
-  .username {
-    margin-top: -10vh;
-    grid-area: username;
-  }
-  
-  .password {
-    margin-top: -30vh;
-    grid-area: password;
-  }
-  
-  .button {
-    grid-area: button;
-    margin-top: -35vh;
-  }
-  
-  .forgot {
-    grid-area: forgot;
-    margin-top: -50vh;
-  }
-
-  .logo{
-    margin-left: 17.5%;
-    margin-top: -220vh;
-    width: 15vw;
-  }
+}
