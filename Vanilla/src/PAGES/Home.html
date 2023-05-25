@@ -25,7 +25,7 @@
               <button class="menu-option">Produtos</button>
               <button class="menu-option">Relatórios de Trocas</button>
             </div>
-            <button class="botao_sair">Sair</button>
+            <button id="sair" class="botao_sair">Sair</button>
           </div>
         </div>
         <div class="conteudo">
@@ -42,10 +42,11 @@
         });
 
         document
-        .getElementsByClassName("botao_sair")
+        .getElementById("sair")
         .addEventListener("click", function () {
-          window.location.href = ".../index.html";
+          window.location.href = "../index.html";
         });
+
       </script>
 </body>
 
