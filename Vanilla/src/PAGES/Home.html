@@ -20,7 +20,7 @@
               <input type="text" placeholder="Pesquisar" />
             </div>
             <div class="menu">
-              <button class="menu-option">Ususários</button>
+              <button id="users" class="menu-option">Usuários</button>
               <button class="menu-option">Lojas</button>
               <button class="menu-option">Produtos</button>
               <button class="menu-option">Relatórios de Trocas</button>
@@ -33,6 +33,20 @@
             <h3 class="bem-vindo">Seja Bem Vindo !</h3>
         </div>
       </div>
+
+      <script>
+        document
+        .getElementById("users")
+        .addEventListener("click", function () {
+          window.location.href = "CadastroUsuarios.html";
+        });
+
+        document
+        .getElementsByClassName("botao_sair")
+        .addEventListener("click", function () {
+          window.location.href = ".../index.html";
+        });
+      </script>
 </body>
 
 </html>
