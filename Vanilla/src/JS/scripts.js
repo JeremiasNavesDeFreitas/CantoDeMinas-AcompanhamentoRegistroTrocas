@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var form = document.querySelector('form');
     var salvarButton = document.getElementById('salvarButton');
   
+
     salvarButton.addEventListener('click', function(event) {
       event.preventDefault(); // Impede o envio padrão do formulário
   
