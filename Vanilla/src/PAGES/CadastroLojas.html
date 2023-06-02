@@ -20,8 +20,8 @@
               <input type="text" placeholder="Pesquisar" />
             </div>
             <div class="menu">
-              <button class="menu-option">Usuários</button>
-              <button id="loja" class="menu-option">Lojas</button>
+              <button id="users" class="menu-option">Usuários</button>
+              <button class="menu-option">Lojas</button>
               <button id="produto" class="menu-option">Produtos</button>
               <button class="menu-option">Relatórios de Trocas</button>
             </div>
@@ -51,14 +51,6 @@
       <label for="senha">Senha:</label>
       <input type="text" id="senha" name="senha"><br><br>
 
-      <select id="cargo" name="cargo">
-        <option value="">Selecione um cargo</option>
-        <option value="administrador">Administrador</option>
-        <option value="supervisor">Supervisor</option>
-        <option value="repositor">Repositor</option>
-        <option value="logista">Logista</option>
-      </select><br><br>
-
       <div class="buttons">
         <button>Deletar</button>
         <button>Alterar</button>
@@ -74,16 +66,17 @@
         });
 
         document
-        .getElementById("loja")
+        .getElementById("users")
         .addEventListener("click", function () {
-          window.location.href = "CadastroLojas.html";
+          window.location.href = "CadastroUsuarios.html";
         });
 
         document
         .getElementById("produto")
         .addEventListener("click", function () {
-          window.location.href = "CadastroUsuarios.html";
+          window.location.href = "CadastroProdutos.html";
         });
+
 
       </script>
 </body>

@@ -21,7 +21,7 @@
             </div>
             <div class="menu">
               <button id="users" class="menu-option">Usuários</button>
-              <button class="menu-option">Lojas</button>
+              <button id="loja" class="menu-option">Lojas</button>
               <button class="menu-option">Produtos</button>
               <button class="menu-option">Relatórios de Trocas</button>
             </div>
@@ -45,6 +45,12 @@
         .getElementById("sair")
         .addEventListener("click", function () {
           window.location.href = "../index.html";
+        });
+
+        document
+        .getElementById("loja")
+        .addEventListener("click", function () {
+          window.location.href = "CadastroLojas.html";
         });
 
       </script>
