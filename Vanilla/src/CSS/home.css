@@ -1,7 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+  }
+  input[type=text] {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: white;
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding-left: 25px;
+  }
+  
+  input[type=text]:focus {
+    border-color: #FFA424;
+    transition: border-color 0.3s ease-in-out;
   }
 
   .grid-container {
@@ -22,7 +42,7 @@ body {
   .user-bar {
     display: flex;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #04591D;
     padding: 10px;
     border-radius: 5px;
   }
@@ -31,13 +51,14 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #fff;
     margin-right: 10px;
   }
 
   .user-details {
     display: flex;
     flex-direction: column;
+    color: #FCFCFC;
   }
 
   .user-name {
@@ -45,7 +66,7 @@ body {
   }
 
   .access-level {
-    color: #888;
+    color: #FCFCFC;
   }
 
   .search-bar {
@@ -54,6 +75,7 @@ body {
     margin-bottom: 30px;
     margin-top: 20px;
     width: 100%;
+    margin-bottom: 10vh;
   }
 
   .menu {
@@ -63,10 +85,16 @@ body {
   }
 
   .menu-option {
-    padding: 10px 20px;
-    background-color: lightgray;
-    margin-bottom: 10px;
-    width: 15vw;
+    justify-self: center;
+    grid-area: button;
+    background-color:#FFA424;
+    color: #fff;
+    width: 86.5%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Geologica', sans-serif;
+    margin-bottom: 5vh;
   }
 
   .content {
@@ -74,15 +102,32 @@ body {
   }
 
   .botao_sair {
-    margin-top: 40vh;
+    margin-top: 25vh;
+    justify-self: center;
+    grid-area: button;
+    background-color:#E61D07;
+    color: #fff;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Geologica', sans-serif;
   }
 
   .titulo {
+    margin-top: 25vh;
     text-align: center; /* Centraliza o texto "Sistema de Controle e Acompanhamento de Trocas" */
+    font-size: 48px;  
+    font-family: 'Geologica', sans-serif;
+  
   }
 
+
   .bem-vindo {
-    text-align: center; /* Centraliza o texto "Seja Bem Vindo!" */
+    text-align: center;
+    font-size: 48px;
+    color: #E89520;
+    font-family: 'Geologica', sans-serif; /* Centraliza o texto "Seja Bem Vindo!" */
   }
 
 
