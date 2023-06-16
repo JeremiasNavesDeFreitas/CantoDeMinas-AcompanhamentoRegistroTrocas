@@ -130,6 +130,13 @@ body {
     font-family: 'Geologica', sans-serif; /* Centraliza o texto "Seja Bem Vindo!" */
   }
 
+  .campo_upload_imagem{
+    justify-items: center;
+    background-color: #ccc;
+    border: black;
+    padding: 20px;
+  }
+
 
   @media (max-width: 768px) {
     /* Estilos para telas menores ou iguais a 768px de largura */
