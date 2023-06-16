@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   display: flex;
   justify-content: center;
@@ -5,6 +7,43 @@ body {
   height: 100vh;
   overflow: hidden;
   background-color: #05862c;
+}
+
+input[type=text] {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background-color: white;
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 30px;
+}
+
+input[type=text]:focus {
+  border-color: #FFA424;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type=password] {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background-color: white;
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 30px;
+  margin-bottom: 2vh;
+}
+
+input[type=password]:focus {
+  border-color: #FFA424;
+  transition: border-color 0.3s ease-in-out;
 }
 
 .grid-container {
@@ -20,7 +59,7 @@ body {
   padding: 10px;
   background-color: #fff;
   align-items: center;
-  width: 75vw;
+  width: 80vw;
   border-radius: 20px;
 }
 
@@ -29,8 +68,10 @@ body {
 }
 
 .login {
+  margin-top: -5vh;
   grid-area: login;
-  font-size:medium;
+  font-size: small;
+  font-family: 'Geologica', sans-serif;
 }
 
 .username {
@@ -42,11 +83,21 @@ body {
 }
 
 .button {
+  justify-self: center;
   grid-area: button;
+  background-color:#FFA424;
+  color: #fff;
+  width: 86.5%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Geologica', sans-serif;
 }
 
 .forgot {
   grid-area: forgot;
+  font-size: smaller;
+  font-family: 'Geologica', sans-serif;
 }
 
 .logo {
