@@ -135,6 +135,13 @@ body {
     background-color: #ccc;
     border: black;
     padding: 20px;
+    margin-bottom: 2vh;
+  }
+
+  .form{
+    margin-top: 5vh;
+    margin-left: 25vw;
+    justify-items: center;
   }
 
 
