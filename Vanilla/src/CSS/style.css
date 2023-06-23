@@ -107,6 +107,10 @@ input[type=password]:focus {
   max-width: 175px;
 }
 
+.buttons button{
+  background-color: #05862c;
+}
+
 @media only screen and (orientation: landscape) {
   .grid-container {
     display: grid;

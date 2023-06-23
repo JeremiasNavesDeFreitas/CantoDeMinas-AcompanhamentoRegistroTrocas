@@ -144,6 +144,14 @@ body {
     justify-items: center;
   }
 
+  .titulo{
+    margin-left: 7vw;
+  }
+
+  .bem-vindo{
+    margin-left: 7vw;
+
+  }
 
   @media (max-width: 768px) {
     /* Estilos para telas menores ou iguais a 768px de largura */
