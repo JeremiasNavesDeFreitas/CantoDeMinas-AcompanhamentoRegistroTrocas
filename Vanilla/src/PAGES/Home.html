@@ -3,6 +3,9 @@
 
 <head>
   <link rel="stylesheet" href="../CSS/home.css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -124,8 +127,8 @@
     <span class="close">&times;</span>
     <h2>Registrar Trocas</h2>
     <form id="trocasForm">
-      <label for="data">Data:</label>
-      <input type="text" id="data" name="data" required>
+      <label for="datepicker">Data:</label>
+      <input type="text" id="datepicker" name="datepicker" required>
 
       <label for="id_produto">ID do Produto:</label>
       <input type="text" id="id_produto" name="id_produto" required>
@@ -136,11 +139,11 @@
       <label for="lote">Lote:</label>
       <input type="text" id="lote" name="lote" required>
 
-      <label for="data_fabricacao">Data de Fabricação:</label>
-      <input type="text" id="data_fabricacao" name="data_fabricacao" required>
+      <label for="datepicker">Data de Fabricação:</label>
+      <input type="text" id="datepicker2" name="datepicker" required>
 
-      <label for="data_vencimento">Data de Vencimento:</label>
-      <input type="text" id="data_vencimento" name="data_vencimento" required>
+      <label for="datapicker">Data de Vencimento:</label>
+      <input type="text" id="datepicker3" name="datepicker" required>
 
       <label for="quantidade">Quantidade:</label>
       <input type="text" id="quantidade" name="quantidade" required>
@@ -219,6 +222,12 @@
     document.getElementById("sair").addEventListener("click", function () {
       window.location.href = "../index.html";
     });
+
+    $(function() {
+    $("#datepicker").datepicker();
+    $("#datepicker2").datepicker();
+    $("#datepicker3").datepicker();
+  });
   </script>
 </body>
 
