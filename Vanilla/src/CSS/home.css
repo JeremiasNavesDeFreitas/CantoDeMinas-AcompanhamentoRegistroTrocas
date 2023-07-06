@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 20vh;
-  margin-bottom: -10vh;
+  margin-bottom: -5vh;
 }
 button#registrar_trocas {
   background-color: #FF5B17;
