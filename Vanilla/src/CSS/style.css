@@ -57,7 +57,7 @@ input[type=password]:focus {
     "forgot";
   grid-gap: 10px;
   padding: 10px;
-  background-color: #fff;
+  background-color: #05862c;
   align-items: center;
   width: 80vw;
   border-radius: 20px;
@@ -72,6 +72,7 @@ input[type=password]:focus {
   grid-area: login;
   font-size: small;
   font-family: 'Geologica', sans-serif;
+  color: #fff;
 }
 
 .username {
@@ -98,6 +99,7 @@ input[type=password]:focus {
   grid-area: forgot;
   font-size: smaller;
   font-family: 'Geologica', sans-serif;
+  color: #fff;
 }
 
 .logo {
@@ -123,7 +125,7 @@ input[type=password]:focus {
       "forgot";
     grid-gap: 10px;
     padding: 10px;
-    background-color: #fff;
+    background-color: #05862c;
     align-items: center;
     width: 20vw;
     border-radius: 20px;
