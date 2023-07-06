@@ -202,6 +202,9 @@ input:invalid {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 20vh;
+  margin-top: 5vh;
+  margin-bottom: -1vh;
 }
 
 #relatoriosModal button#exportar_pdf:hover {
