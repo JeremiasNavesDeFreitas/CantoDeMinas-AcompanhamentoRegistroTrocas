@@ -149,6 +149,13 @@ input:invalid {
   border-color: #ff0000;
 }
 
+
+#logomenu{
+  width: 10vw;
+  margin-bottom: -20vh;
+}
+
+
 /* Estilo do modal */
 #relatoriosModal .modal-content {
   background-color: #fefefe;
