@@ -6,39 +6,92 @@
 </head>
 
 <body>
-    <div class="grid-container">
-        <div class="sidebar">
-          <div class="content">
-            <div class="menu">
-              <button id="users" class="menu-option">Usuários</button>
-              <button id="loja" class="menu-option">Lojas</button>
-              <button class="menu-option">Produtos</button>
-              <button class="menu-option">Relatórios de Trocas</button>
-            </div>
-            <button id="sair" class="botao_sair">Sair</button>
-          </div>
+  <div class="grid-container">
+    <div class="sidebar">
+      <div class="content">
+        <div class="menu">
+          <button id="users" class="menu-option">Usuários</button>
+          <button id="loja" class="menu-option">Lojas</button>
+          <button id="produtos" class="menu-option">Produtos</button>
+          <button id="relatorios" class="menu-option">Relatórios de Trocas</button>
         </div>
-    </body>
-      <script>
-        document
-        .getElementById("users")
-        .addEventListener("click", function () {
-          window.location.href = "CadastroUsuarios.html";
-        });
+        <button id="sair" class="botao_sair">Sair</button>
+      </div>
+    </div>
+  </div>
 
-        document
-        .getElementById("sair")
-        .addEventListener("click", function () {
-          window.location.href = "../index.html";
-        });
+  <!-- Modais -->
+  <div id="usersModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Usuários</h2>
+      <p>Conteúdo do modal de usuários...</p>
+    </div>
+  </div>
 
-        document
-        .getElementById("loja")
-        .addEventListener("click", function () {
-          window.location.href = "CadastroLojas.html";
-        });
+  <div id="lojaModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Lojas</h2>
+      <p>Conteúdo do modal de lojas...</p>
+    </div>
+  </div>
 
-      </script>
+  <div id="produtosModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Produtos</h2>
+      <p>Conteúdo do modal de produtos...</p>
+    </div>
+  </div>
+
+  <div id="relatoriosModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Relatórios de Trocas</h2>
+      <p>Conteúdo do modal de relatórios de trocas...</p>
+    </div>
+  </div>
+
+  <script>
+    // Função para exibir o modal correspondente ao botão clicado
+    function openModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = "block";
+
+      var closeModal = modal.getElementsByClassName("close")[0];
+      closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", function (event) {
+        if (event.target== modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+
+    // Adicionar listeners de evento para cada botão
+    document.getElementById("users").addEventListener("click", function () {
+      openModal("usersModal");
+    });
+
+    document.getElementById("loja").addEventListener("click", function () {
+      openModal("lojaModal");
+    });
+
+    document.getElementById("produtos").addEventListener("click", function () {
+      openModal("produtosModal");
+    });
+
+    document.getElementById("relatorios").addEventListener("click", function () {
+      openModal("relatoriosModal");
+    });
+
+    document.getElementById("sair").addEventListener("click", function () {
+      window.location.href = "../index.html";
+    });
+  </script>
 </body>
 
 </html>
