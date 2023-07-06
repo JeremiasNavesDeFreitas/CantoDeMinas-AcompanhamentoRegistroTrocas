@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 20vh;
+  margin-bottom: -10vh;
 }
 button#registrar_trocas {
   background-color: #FF5B17;
@@ -225,7 +226,7 @@ input:invalid {
   .menu-option,
   .botao_sair {
     width: 80vw; /* Aumenta a largura do botão */
-    margin-bottom: 3vh; /* Reduz o espaçamento inferior entre os botões */
+    margin-bottom: 5vh; /* Reduz o espaçamento inferior entre os botões */
     font-size: 24px; /* Reduz o tamanho da fonte */
   }
 }
