@@ -1,46 +1,30 @@
-const express = require('express');
-const mysql = require('mysql2');
-const app = express();
-const port = 3000;
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("relatoriosForm");
 
-// Configuração do banco de dados MySQL
-const connection = mysql.createConnection({
-  host: '',
-  user: '',
-  password: '',
-  database: 'db-canto-de-minas'
-});
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Evita o envio do formulário
 
-// Verifica a conexão com o banco de dados
-connection.connect((err) => {
-  if (err) {
-    console.error('Erro na conexão com o banco de dados:', err);
-    return;
-  }
-  console.log('Conexão com o banco de dados estabelecida!');
-});
+    // Obtém os valores dos campos do formulário
+    var data = document.getElementById("data").value;
+    var idProduto = document.getElementById("id_produto").value;
+    var descricao = document.getElementById("descricao").value;
+    var lote = document.getElementById("lote").value;
+    var dataFabricacao = document.getElementById("data_fabricacao").value;
+    var dataVencimento = document.getElementById("data_vencimento").value;
+    var quantidade = document.getElementById("quantidade").value;
+    var codigoConfirmacao = document.getElementById("codigo_confirmacao").value;
 
-// Configuração do servidor Express.js
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+    // Faça o que desejar com os valores dos campos
+    console.log("Data:", data);
+    console.log("ID do Produto:", idProduto);
+    console.log("Descrição:", descricao);
+    console.log("Lote:", lote);
+    console.log("Data de Fabricação:", dataFabricacao);
+    console.log("Data de Vencimento:", dataVencimento);
+    console.log("Quantidade:", quantidade);
+    console.log("Código de Confirmação:", codigoConfirmacao);
 
-// Rota para processar o formulário
-app.post('/processar_formulario', (req, res) => {
-  const { id, nome, cpf } = req.body;
-
-  // Insere os dados no banco de dados
-  const sql = `INSERT INTO tabela (id, nome, cpf) VALUES (?, ?, ?)`;
-  connection.query(sql, [id, nome, cpf], (err, result) => {
-    if (err) {
-      console.error('Erro ao inserir os dados:', err);
-      res.status(500).json({ error: 'Erro ao inserir os dados' });
-      return;
-    }
-    res.status(200).json({ message: 'Dados inseridos com sucesso' });
+    // Limpa os campos do formulário
+    form.reset();
   });
-});
-
-// Inicia o servidor
-app.listen(port, () => {
-  console.log(`Servidor iniciado na porta ${port}`);
 });
