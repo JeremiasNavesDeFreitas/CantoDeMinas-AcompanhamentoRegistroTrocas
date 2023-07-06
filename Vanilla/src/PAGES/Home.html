@@ -32,28 +32,29 @@
     <h2>Usuários</h2>
     <form id="userForm">
       <label for="id">ID:</label>
-      <input type="text" id="id" name="id" required>
+      <input type="text" id="idUsuario" name="id" required>
 
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+      <input type="text" id="nomeUsuario" name="nome" required>
 
       <label for="cpf">CPF:</label>
-      <input type="text" id="cpf" name="cpf" required>
+      <input type="text" id="cpfUsuario" name="cpf" required>
 
       <label for="celular">Celular:</label>
-      <input type="text" id="celular" name="celular" required>
+      <input type="text" id="celularUsuario" name="celular" required>
 
       <label for="endereco">Endereço:</label>
-      <input type="text" id="endereco" name="endereco" required>
+      <input type="text" id="enderecoUsuario" name="endereco" required>
 
       <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="emailUsuario" name="email" required>
 
       <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" required>
+      <input type="password" id="senhaUsuario" name="senha" required>
 
       <label for="funcao">Função:</label>
-      <select id="funcao" name="funcao" required>
+      <select id="funcaoUsuario" name="funcao" required>
+        <option >Escolher...</option>
         <option value="administrador">Administrador</option>
         <option value="representante">Supervisor</option>
         <option value="repositor">Repositor</option>
@@ -73,22 +74,22 @@
     <h2>Lojas</h2>
     <form id="lojaForm">
       <label for="id">ID:</label>
-      <input type="text" id="id" name="id" required>
+      <input type="text" id="idLoja" name="id" required>
 
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+      <input type="text" id="nomeLoja" name="nome" required>
 
       <label for="cnpj">CNPJ:</label>
-      <input type="text" id="cnpj" name="cnpj" required>
+      <input type="text" id="cnpjLoja" name="cnpj" required>
 
       <label for="endereco">Endereço:</label>
-      <input type="text" id="endereco" name="endereco" required>
+      <input type="text" id="enderecoLoja" name="endereco" required>
 
       <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="emailLoja" name="email" required>
 
       <label for="representante">Representante:</label>
-      <input type="text" id="representante" name="representante" required>
+      <input type="text" id="representanteLoja" name="representante" required>
 
       <button id="cadastroLoja" type="submit">Salvar</button>
     </form>
@@ -233,29 +234,60 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault(); // Evita o envio do formulário
 
     // Obtém os valores dos campos do formulário
-    var id = document.getElementById("id").value;
-    var nome = document.getElementById("nome").value;
-    var cpf = document.getElementById("cpf").value;
-    var celular = document.getElementById("celular").value;
-    var endereco = document.getElementById("endereco").value;
-    var email = document.getElementById("email").value;
-    var senha = document.getElementById("senha").value;
-    var funcao = document.getElementById("funcao").value;
+    var idUsuario = document.getElementById("idUsuario").value;
+    var nomeUsuario = document.getElementById("nomeUsuario").value;
+    var cpfUsuario = document.getElementById("cpfUsuario").value;
+    var celularUsuario = document.getElementById("celularUsuario").value;
+    var enderecoUsuario = document.getElementById("enderecoUsuario").value;
+    var emailUsuario = document.getElementById("emailUsuario").value;
+    var senhaUsuario = document.getElementById("senhaUsuario").value;
+    var funcaoUsuario = document.getElementById("funcaoUsuario").value;
 
     // Faça o que desejar com os valores dos campos
-    console.log("ID:", id);
-    console.log("Nome:", nome);
-    console.log("CPF:", cpf);
-    console.log("Celular:", celular);
-    console.log("Endereço:", endereco);
-    console.log("E-mail:", email);
-    console.log("Senha:", senha);
-    console.log("Função:", funcao);
+    console.log("ID:", idUsuario);
+    console.log("Nome:", nomeUsuario);
+    console.log("CPF:", cpfUsuario);
+    console.log("Celular:", celularUsuario);
+    console.log("Endereço:", enderecoUsuario);
+    console.log("E-mail:", emailUsuario);
+    console.log("Senha:", senhaUsuario);
+    console.log("Função:", funcaoUsuario);
 
     // Limpa os campos do formulário
     form.reset();
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("lojaForm");
+  var btnSalvar = document.getElementById("cadastroLoja");
+
+  btnSalvar.addEventListener("click", function (event) {
+    event.preventDefault(); // Evita o envio do formulário
+
+    // Obtém os valores dos campos do formulário
+    var idLoja = document.getElementById("idLoja").value;
+    var nomeLoja= document.getElementById("nomeLoja").value;
+    var cnpjLoja = document.getElementById("cnpjLoja").value;
+    var enderecoLoja = document.getElementById("enderecoLoja").value;
+    var emailLoja = document.getElementById("emailLoja").value;
+    var representanteLoja = document.getElementById("representanteLoja").value;
+
+    // Faça o que desejar com os valores dos campos
+    console.log("ID:", idLoja);
+    console.log("Nome:", nomeLoja);
+    console.log("CNPJ:", cnpjLoja);
+    console.log("Endereço:", enderecoLoja);
+    console.log("E-mail:", emailLoja);
+    console.log("Representante:", representanteLoja);
+
+    // Limpa os campos do formulário
+    form.reset();
+  });
+});
+
+
+
 
 
     $(function() {
