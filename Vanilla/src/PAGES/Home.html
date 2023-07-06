@@ -12,8 +12,8 @@
   <div class="grid-container">
     <div class="sidebar">
       <div class="content">
-        <img id="logomenu" src="./Img/Logo.png">
         <div class="menu">
+          <img id="logomenu" src="./Img/Logo.png">
           <button id="users" class="menu-option">Usuários</button>
           <button id="loja" class="menu-option">Lojas</button>
           <button id="produtos" class="menu-option">Produtos</button>
@@ -104,21 +104,21 @@
     <h2>Produtos</h2>
     <form id="produtoForm">
       <label for="id">ID:</label>
-      <input type="text" id="id" name="id" required>
+      <input type="text" id="idProdutos" name="id" required>
 
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+      <input type="text" id="nomeProdutos" name="nome" required>
 
       <label for="desc">Descrição:</label>
-      <textarea id="desc" name="desc" required></textarea>
+      <textarea id="desc" name="descProdutos" required></textarea>
 
       <label for="peso">Peso:</label>
-      <input type="text" id="peso" name="peso" required>
+      <input type="text" id="pesoProdutos" name="peso" required>
 
       <label for="foto">Foto:</label>
-      <input type="file" id="foto" name="foto" required>
+      <input type="file" id="fotoProdutos" name="foto" required>
 
-      <button type="submit">Enviar</button>
+      <button id="cadastroProduto" type="submit">Salvar</button>
     </form>
   </div>
 </div>
@@ -130,30 +130,30 @@
     <h2>Registrar Trocas</h2>
     <form id="trocasForm">
       <label for="datepicker">Data:</label>
-      <input type="text" id="datepicker" name="datepicker" required>
+      <input type="text" id="datepickerregistrar_trocas" name="datepicker" required>
 
       <label for="id_produto">ID do Produto:</label>
-      <input type="text" id="id_produto" name="id_produto" required>
+      <input type="text" id="id_produtoregistrar_trocas" name="id_produto" required>
 
       <label for="descricao">Descrição:</label>
-      <input type="text" id="descricao" name="descricao" required>
+      <input type="text" id="descricaoregistrar_trocas" name="descricao" required>
 
       <label for="lote">Lote:</label>
-      <input type="text" id="lote" name="lote" required>
+      <input type="text" id="loteregistrar_trocas" name="lote" required>
 
       <label for="datepicker">Data de Fabricação:</label>
-      <input type="text" id="datepicker2" name="datepicker" required>
+      <input type="text" id="datepicker2registrar_trocas" name="datepicker" required>
 
       <label for="datapicker">Data de Vencimento:</label>
-      <input type="text" id="datepicker3" name="datepicker" required>
+      <input type="text" id="datepicker3registrar_trocas" name="datepicker" required>
 
       <label for="quantidade">Quantidade:</label>
-      <input type="text" id="quantidade" name="quantidade" required>
+      <input type="text" id="quantidaderegistrar_trocas" name="quantidade" required>
 
       <label for="codigo_confirmacao">Código de Confirmação:</label>
-      <input type="text" id="codigo_confirmacao" name="codigo_confirmacao" required>
+      <input type="text" id="codigo_confirmacaoregistrar_trocas" name="codigo_confirmacao" required>
 
-      <button type="submit">Enviar</button>
+      <button id="registrar_trocasCadastro" type="submit">Salvar</button>
     </form>
   </div>
 </div>
@@ -286,7 +286,106 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("produtoForm");
+  var btnSalvar = document.getElementById("cadastroProduto");
 
+  btnSalvar.addEventListener("click", function (event) {
+    event.preventDefault(); // Evita o envio do formulário
+
+    // Obtém os valores dos campos do formulário
+    var idProdutos = document.getElementById("idProdutos").value;
+    var nomeProdutos = document.getElementById("nomeProdutos").value;
+    var descricaoProdutos = document.getElementById("desc").value;
+    var pesoProdutos = document.getElementById("pesoProdutos").value;
+    var fotoProdutos = document.getElementById("fotoProdutos").value;
+
+    // Faça o que desejar com os valores dos campos
+    console.log("ID:", idProdutos);
+    console.log("Nome:", nomeProdutos);
+    console.log("Descrição:", descricaoProdutos);
+    console.log("Peso:", pesoProdutos);
+    console.log("Foto:", fotoProdutos);
+
+    // Limpa os campos do formulário
+    form.reset();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("trocasForm");
+  var btnSalvar = document.getElementById("registrar_trocasCadastro");
+
+  var dadosTrocas = []; // Lista para armazenar os dados de trocas
+
+  btnSalvar.addEventListener("click", function (event) {
+    event.preventDefault(); // Evita o envio do formulário
+
+    // Obtém os valores dos campos do formulário
+    var dataregistrar_trocas = document.getElementById("datepickerregistrar_trocas").value;
+    var idProdutoregistrar_trocas = document.getElementById("id_produtoregistrar_trocas").value;
+    var descricaoregistrar_trocas = document.getElementById("descricaoregistrar_trocas").value;
+    var loteregistrar_trocas = document.getElementById("loteregistrar_trocas").value;
+    var dataFabricacaoregistrar_trocas = document.getElementById("datepicker2registrar_trocas").value;
+    var dataVencimentoregistrar_trocas = document.getElementById("datepicker3registrar_trocas").value;
+    var quantidaderegistrar_trocas = document.getElementById("quantidaderegistrar_trocas").value;
+    var codigoConfirmacaoregistrar_trocas = document.getElementById("codigo_confirmacaoregistrar_trocas").value;
+
+    // Cria um objeto com os dados da troca atual
+    var dadosTroca = {
+      dataregistrar_trocas: dataregistrar_trocas,
+      idProdutoregistrar_trocas: idProdutoregistrar_trocas,
+      descricaoregistrar_trocas: descricaoregistrar_trocas,
+      loteregistrar_trocas: loteregistrar_trocas,
+      dataFabricacaoregistrar_trocas: dataFabricacaoregistrar_trocas,
+      dataVencimentoregistrar_trocas: dataVencimentoregistrar_trocas,
+      quantidaderegistrar_trocas: quantidaderegistrar_trocas,
+      codigoConfirmacaoregistrar_trocas: codigoConfirmacaoregistrar_trocas
+    };
+
+    // Adiciona os dados da troca à lista
+    dadosTrocas.push(dadosTroca);
+
+    // Faça o que desejar com os dados da troca atual
+    console.log("Dados da Troca:", dadosTroca);
+
+    // Limpa os campos do formulário
+    form.reset();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tabelaTrocas = document.getElementById("trocasTable");
+
+  function exibirDadosTrocas() {
+    // Limpa o conteúdo atual da tabela
+    tabelaTrocas.getElementsByTagName("tbody")[0].innerHTML = "";
+
+    // Percorre a lista de dados de trocas e adiciona as linhas na tabela
+    dadosTrocas.forEach(function (troca) {
+      var row = tabelaTrocas.insertRow();
+      var cellData = row.insertCell();
+      cellData.textContent = troca.dataregistrar_trocas;
+      var cellIdProduto = row.insertCell();
+      cellIdProduto.textContent = troca.idProdutoregistrar_trocas;
+      var cellDescricao = row.insertCell();
+      cellDescricao.textContent = troca.descricaoregistrar_trocas;
+      var cellLote = row.insertCell();
+      cellLote.textContent = troca.loteregistrar_trocas;
+      var cellDataFabricacao = row.insertCell();
+      cellDataFabricacao.textContent = troca.dataFabricacaoregistrar_trocas;
+      var cellDataVencimento = row.insertCell();
+      cellDataVencimento.textContent = troca.dataVencimentoregistrar_trocas;
+      var cellQuantidade = row.insertCell();
+      cellQuantidade.textContent = troca.quantidaderegistrar_trocas;
+      var cellCodigoConfirmacao = row.insertCell();
+      cellCodigoConfirmacao.textContent = troca.codigoConfirmacaoregistrar_trocas;
+    });
+  }
+
+  // Chame a função para exibir os dados ao carregar a página
+  exibirDadosTrocas();
+});
 
 
 
