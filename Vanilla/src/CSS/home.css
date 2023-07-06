@@ -103,11 +103,11 @@ input[type="email"] {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-label[for="funcao"] {
+label[for="funcaoUsuario"] {
   font-weight: bold;
 }
 
-select#funcao {
+select#funcaoUsuario {
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
