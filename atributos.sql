@@ -13,7 +13,7 @@
 -- cnpj
 -- endereco
 -- email
--- representante - id_usuario
+-- representante - foreign_key_usuario
 
 -- Produtos:
 -- id

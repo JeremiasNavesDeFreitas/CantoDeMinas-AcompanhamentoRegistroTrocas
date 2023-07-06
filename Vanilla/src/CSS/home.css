@@ -14,6 +14,10 @@ body {
   align-items: center;
   margin-top: 20vh;
 }
+button#registrar_trocas {
+  background-color: red;
+  color: #05862c;
+}
 
 .menu-option,
 .botao_sair {
@@ -39,25 +43,26 @@ body {
   background-color: #E61D07;
 }
 
+/* Estilo do modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 9999;
-  top: 0;
+  z-index: 1;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid #ccc;
   width: 80%;
-  border: none;
+  max-width: 500px;
   border-radius: 5px;
 }
 
@@ -71,10 +76,139 @@ body {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #000;
   text-decoration: none;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+label[for="funcao"] {
+  font-weight: bold;
+}
+
+select#funcao {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+label[for="foto"] {
+  font-weight: bold;
+}
+
+input[type="file"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+input:required {
+  border-color: #ff0000;
+}
+
+input:valid {
+  border-color: #00ff00;
+}
+
+input:invalid {
+  border-color: #ff0000;
+}
+
+/* Estilo do modal */
+#relatoriosModal .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 5px;
+}
+
+#relatoriosModal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#relatoriosModal .close:hover,
+#relatoriosModal .close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+#relatoriosModal h2 {
+  margin-top: 0;
+}
+
+#relatoriosModal table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#relatoriosModal table th,
+#relatoriosModal table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+#relatoriosModal table th {
+  font-weight: bold;
+}
+
+#relatoriosModal button#exportar_pdf {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#relatoriosModal button#exportar_pdf:hover {
+  background-color: #45a049;
+}
+
+
 
 @media only screen and (max-width: 767px) {
   /* Estilos para dispositivos móveis */

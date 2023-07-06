@@ -13,6 +13,7 @@
           <button id="users" class="menu-option">Usuários</button>
           <button id="loja" class="menu-option">Lojas</button>
           <button id="produtos" class="menu-option">Produtos</button>
+          <button id="registrar_trocas" class="menu-option">REGISTRAR TROCA</button>
           <button id="relatorios" class="menu-option">Relatórios de Trocas</button>
         </div>
         <button id="sair" class="botao_sair">Sair</button>
@@ -20,38 +21,161 @@
     </div>
   </div>
 
-  <!-- Modais -->
-  <div id="usersModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Usuários</h2>
-      <p>Conteúdo do modal de usuários...</p>
-    </div>
-  </div>
+<!-- Modais -->
+<div id="usersModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Usuários</h2>
+    <form id="userForm">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required>
 
-  <div id="lojaModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Lojas</h2>
-      <p>Conteúdo do modal de lojas...</p>
-    </div>
-  </div>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
 
-  <div id="produtosModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Produtos</h2>
-      <p>Conteúdo do modal de produtos...</p>
-    </div>
-  </div>
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" required>
 
-  <div id="relatoriosModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Relatórios de Trocas</h2>
-      <p>Conteúdo do modal de relatórios de trocas...</p>
-    </div>
+      <label for="celular">Celular:</label>
+      <input type="text" id="celular" name="celular" required>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <label for="funcao">Função:</label>
+      <select id="funcao" name="funcao" required>
+        <option value="administrador">Administrador</option>
+        <option value="representante">Representante</option>
+        <option value="repositor">Repositor</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
   </div>
+</div>
+
+
+<!-- Modals LOJA-->
+<div id="lojaModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Lojas</h2>
+    <form id="lojaForm">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="cnpj">CNPJ:</label>
+      <input type="text" id="cnpj" name="cnpj" required>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="representante">Representante:</label>
+      <input type="text" id="representante" name="representante" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Modais -->
+<div id="produtosModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Produtos</h2>
+    <form id="produtoForm">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="desc">Descrição:</label>
+      <textarea id="desc" name="desc" required></textarea>
+
+      <label for="peso">Peso:</label>
+      <input type="text" id="peso" name="peso" required>
+
+      <label for="foto">Foto:</label>
+      <input type="file" id="foto" name="foto" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modais -->
+<div id="registrar_trocasModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Registrar Trocas</h2>
+    <form id="trocasForm">
+      <label for="data">Data:</label>
+      <input type="text" id="data" name="data" required>
+
+      <label for="id_produto">ID do Produto:</label>
+      <input type="text" id="id_produto" name="id_produto" required>
+
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" name="descricao" required>
+
+      <label for="lote">Lote:</label>
+      <input type="text" id="lote" name="lote" required>
+
+      <label for="data_fabricacao">Data de Fabricação:</label>
+      <input type="text" id="data_fabricacao" name="data_fabricacao" required>
+
+      <label for="data_vencimento">Data de Vencimento:</label>
+      <input type="text" id="data_vencimento" name="data_vencimento" required>
+
+      <label for="quantidade">Quantidade:</label>
+      <input type="text" id="quantidade" name="quantidade" required>
+
+      <label for="codigo_confirmacao">Código de Confirmação:</label>
+      <input type="text" id="codigo_confirmacao" name="codigo_confirmacao" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modais -->
+<div id="relatoriosModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Relatórios de Trocas</h2>
+    <table id="trocasTable">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>ID do Produto</th>
+          <th>Descrição</th>
+          <th>Lote</th>
+          <th>Data de Fabricação</th>
+          <th>Data de Vencimento</th>
+          <th>Quantidade</th>
+          <th>Código de Confirmação</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="exportar_pdf" class="menu-option">Exportar para PDF</button>
+  </div>
+</div>
+
 
   <script>
     // Função para exibir o modal correspondente ao botão clicado
@@ -82,6 +206,9 @@
 
     document.getElementById("produtos").addEventListener("click", function () {
       openModal("produtosModal");
+    });
+    document.getElementById("registrar_trocas").addEventListener("click", function () {
+      openModal("registrar_trocasModal");
     });
 
     document.getElementById("relatorios").addEventListener("click", function () {
